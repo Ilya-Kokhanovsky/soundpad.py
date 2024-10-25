@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "soundpad.py"
+version = "0.1.0"
+description = "A wrapper for remote controlling Soundpad."
+authors = ["Ilya Kokhanovsky <114568934+Ilya-Kokhanovsky@users.noreply.github.com>"]
+maintainers = ["Ilya Kokhanovsky <114568934+Ilya-Kokhanovsky@users.noreply.github.com>",]
+readme = ["README.md", "LICENSE"]
+license = "MIT"
+homepage = "https://github.com/Ilya-Kokhanovsky/soundpad.py"
+repository = "https://github.com/Ilya-Kokhanovsky/soundpad.py"
+keywords = ["soundpad", "remote control", "audio"]
+
+
+[tool.poetry.dependencies]
+python = "[^3.6]"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
