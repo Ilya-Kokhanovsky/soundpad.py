@@ -8,20 +8,23 @@ A simple Python wrapper for controlling Soundpad remotely.
 Overview
 --------
 
-`soundpad_control` is a Python library for interacting with Soundpad over a remote control interface, enabling automated control of sounds in Soundpad from Python scripts. This project aims to provide a simple, user-friendly interface for sending commands to Soundpad.
+This Python package, soundpad_control, offers a remote control interface for Soundpad through Python, enabling programmatic management of audio playback and manipulation features. Modeled after SoundpadRemoteControl.java, it supports functionalities such as playing, pausing, and stopping sounds, managing categories, and controlling audio settings. With easy-to-use methods, users can add, search, and organize audio files, making it ideal for automated setups or complex audio workflows.
 
-Features
---------
+### Features
 
-- Play sounds by index or category
-- Pause, resume, or stop playback
-- Control volume, mute status, and playback position
-- Add or remove sounds and categories
-- Start and stop recording audio
-- Query and select sounds or categories
+- **Play and Stop Sounds**: Start, stop, and navigate sounds, with options to output to speakers or a microphone.
+- **Sound Navigation**: Play previous, next, and random sounds or sounds from specific categories.
+- **Sound Management**: Add or remove sounds and categories, select rows and categories, and manage playback order.
+- **Volume and Playback Control**: Control volume, mute, pause, seek, and scroll playback.
+- **Recording Support**: Start, stop, and monitor recording sessions.
+- **Soundpad Version Check**: Confirm compatibility and connection status with Soundpad.
 
-Quick Start
+Installing
 -----------
+
+**Python 3.6 or higher is required**
+
+A [Virtual Environment](https://docs.python.org/3/library/venv.html) is recommended to install the library, especially on Linux where the system Python is externally managed and restricts which packages you can install on it.
 
 You can install the library via `pip`:
 
@@ -29,18 +32,32 @@ You can install the library via `pip`:
 $ pip install soundpad_control
 ```
 
-Usage Example
+Quick Example
 -------------
 
-Here’s a quick example of how to use `soundpad_control` to play a sound by index.
+Here’s a quick example of how to use `soundpad_control`.
 
 ```python
 from soundpad_control import SoundpadRemoteControl
 
+# Initialize the Soundpad remote control
 soundpad = SoundpadRemoteControl()
 
-# Play a sound at index 1
+# Play a specific sound by index, here at index 1
 soundpad.play_sound(1)
+
+# Play the next sound in the playlist or queue
+soundpad.play_next_sound()
+
+# Add a new sound to Soundpad using the specified file path
+soundpad.add_sound('/path/to/sound.mp3')
+
+# Search for a sound file by its filename or keyword
+soundpad.search('filename')
+
+# Remove selected sound entries; here, `False` keeps the files on disk
+soundpad.remove_selected_entries(False)
+
 ```
 
 Requirements
