@@ -1,9 +1,9 @@
 [tool.poetry]
 name = "soundpad_control"
-version = "0.1.0"
-description = "A wrapper for remote controlling Soundpad."
-authors = ["Ilya Kokhanovsky <114568934+Ilya-Kokhanovsky@users.noreply.github.com>"]
-maintainers = ["Ilya Kokhanovsky <114568934+Ilya-Kokhanovsky@users.noreply.github.com>",]
+version = "0.1.2"
+description = "An API wrapper for Soundpad written in Python."
+authors = ["Ilya Kokhanovsky <kokhanovskyilya@gmail.com>"]
+maintainers = ["Ilya Kokhanovsky <kokhanovskyilya@gmail.com>",]
 readme = ["docs/README.md", "LICENSE"]
 license = "MIT"
 homepage = "https://github.com/Ilya-Kokhanovsky/soundpad.py"
